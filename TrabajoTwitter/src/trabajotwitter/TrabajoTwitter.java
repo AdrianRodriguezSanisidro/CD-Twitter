@@ -13,7 +13,7 @@ public class TrabajoTwitter {
         int opcion;
         String nombre;
         do {
-            opcion = Integer.parseInt(JOptionPane.showInputDialog("1:Publicar twit\n2:Visualizar time line"));
+            opcion = Integer.parseInt(JOptionPane.showInputDialog("1:Publicar twit\n2:Visualizar time line\n3:Buscar twits"));
             switch (opcion) {
                 case 1:
                     Twittear objTwit = new Twittear();
@@ -24,6 +24,12 @@ public class TrabajoTwitter {
                     TimeLine objTime = new TimeLine();
                     objTime.verTimeLine();
                     System.out.println("****Final de la time line****");
+                    break;
+                case 3:
+                    Busqueda objBus= new Busqueda();
+                    objBus.buscarTwit();
+                    System.out.println("****Final de la busqueda****");
+                    break;
             }
         } while (opcion != 0);
     }
