@@ -22,13 +22,11 @@ public class Busqueda {
         try {
             Query query = new Query(mensaje);
             QueryResult result;
-            do {
                 result = Autorizar.autorizacion().search(query);
                 List<Status> twit = result.getTweets();
                 for (int i = 0; i < cantidadTwits; i++) {
-                    System.out.println("@"+ twit.get(i).getUser().getScreenName()+"\nTwits"+ twit.get(i).getText());
+                    System.out.println("@"+ twit.get(i).getUser().getScreenName()+"\nTwits-> "+ twit.get(i).getText());
                 }
-            } while ((query = result.nextQuery()) != null);
             System.exit(0);
         } catch (TwitterException te) {
             te.printStackTrace();
