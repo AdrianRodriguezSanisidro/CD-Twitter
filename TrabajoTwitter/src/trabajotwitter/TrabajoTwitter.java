@@ -11,7 +11,6 @@ public class TrabajoTwitter {
 
     public static void main(String[] args) throws TwitterException {
         int opcion;
-        String nombre;
         do {
             opcion = Integer.parseInt(JOptionPane.showInputDialog("1:Publicar twit\n2:Visualizar time line\n3:Buscar twits"));
             switch (opcion) {
