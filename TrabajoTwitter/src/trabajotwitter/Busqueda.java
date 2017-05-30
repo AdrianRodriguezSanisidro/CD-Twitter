@@ -10,11 +10,14 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 
 /**
- *
+ * Clase que tiene el metodo para buscar
  * @author Adry
  */
 public class Busqueda {
-
+/**
+ * Busca twits or una o mas palabras y muestra tantos twits como quieras
+ * @throws TwitterException 
+ */
     public void buscarTwit() throws TwitterException {
         String mensaje=JOptionPane.showInputDialog("Mensaje a buscar");
         int cantidadTwits=Integer.parseInt(JOptionPane.showInputDialog("Numero maximo de twits que quieres ver"));
