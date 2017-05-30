@@ -4,11 +4,15 @@ import javax.swing.JOptionPane;
 import twitter4j.TwitterException;
 
 /**
- *
+ * Clase principal
  * @author Adry
  */
 public class TrabajoTwitter {
-
+/**
+ * Main donde seleccionamos que accion queremos hacer
+ * @param args
+ * @throws TwitterException 
+ */
     public static void main(String[] args) throws TwitterException {
         int opcion;
         do {
