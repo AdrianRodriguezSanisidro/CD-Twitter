@@ -12,10 +12,14 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 
 /**
- *
+ * Clase con el metodo Twittear
  * @author Adry
  */
 public class Twittear {
+    /**
+     * Publica un twit que escribas
+     * @throws TwitterException 
+     */
     public void publicarTwit()throws TwitterException {
     Status tweetEscrito = Autorizar.autorizacion().updateStatus(JOptionPane.showInputDialog("Twit"));
     }
