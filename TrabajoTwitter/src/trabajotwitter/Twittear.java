@@ -31,6 +31,10 @@ public class Twittear {
     public void publicarTwit()throws TwitterException {
     Status tweetEscrito = Autorizar.autorizacion().updateStatus(JOptionPane.showInputDialog("Twit"));
     }
+    /**
+     * Ve los 20 primeros twits
+     * @throws TwitterException 
+     */
     public void verTimeLine() throws TwitterException {
         List<Status> timeLineList = Autorizar.autorizacion().getHomeTimeline();
         System.out.println("Showing home timeline.");
@@ -41,6 +45,10 @@ public class Twittear {
         }
 
     }
+    /**
+     * Busca el numero de twits que quieras por una palabra
+     * @throws TwitterException 
+     */
     public void buscarTwit() throws TwitterException {
         String mensaje=JOptionPane.showInputDialog("Mensaje a buscar");
         int cantidadTwits=Integer.parseInt(JOptionPane.showInputDialog("Numero maximo de twits que quieres ver"));
