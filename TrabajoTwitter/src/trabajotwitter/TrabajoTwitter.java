@@ -14,23 +14,21 @@ public class TrabajoTwitter {
  * @throws TwitterException 
  */
     public static void main(String[] args) throws TwitterException {
+        Twittear objTwit=new Twittear();
         int opcion;
         do {
             opcion = Integer.parseInt(JOptionPane.showInputDialog("1:Publicar twit\n2:Visualizar time line\n3:Buscar twits"));
             switch (opcion) {
                 case 1:
-                    Twittear objTwit = new Twittear();
                     objTwit.publicarTwit();
                     System.out.println("Twit publicado");
                     break;
                 case 2:
-                    TimeLine objTime = new TimeLine();
-                    objTime.verTimeLine();
+                    objTwit.verTimeLine();
                     System.out.println("****Final de la time line****");
                     break;
                 case 3:
-                    Busqueda objBus= new Busqueda();
-                    objBus.buscarTwit();
+                    objTwit.buscarTwit();
                     System.out.println("****Final de la busqueda****");
                     break;
             }
